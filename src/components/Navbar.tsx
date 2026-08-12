@@ -46,7 +46,15 @@ export default function Navbar({ route }: NavbarProps) {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-2xl">
-      <div className="glass-pill rounded-full px-2 py-2 flex items-center justify-between shadow-lg">
+      <div className="glass-pill rounded-full px-4 py-2 flex items-center justify-between shadow-lg">
+        {/* Mobile brand */}
+        <button
+          onClick={() => { navigate({ name: 'home' }); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          className="md:hidden text-sm font-bold text-ink-900 tracking-tight"
+        >
+          Ashish
+        </button>
+
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-1 flex-1 justify-center">
           {NAV_ITEMS.map((item) => (
@@ -67,7 +75,7 @@ export default function Navbar({ route }: NavbarProps) {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 rounded-full hover:bg-white/40 transition-colors ml-auto"
+          className="md:hidden p-2 rounded-full hover:bg-white/40 transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
