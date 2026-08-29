@@ -9,10 +9,9 @@ const NAV_ITEMS = [
   { id: 'projects', label: 'Projects' },
   { id: 'experience', label: 'Experience' },
   { id: 'blog', label: 'Blog' },
-  { id: 'contact', label: 'Contact' },
 ];
 
-const SECTION_IDS = ['home', 'about', 'projects', 'experience', 'contact'];
+const SECTION_IDS = ['home', 'about', 'projects', 'experience', 'blog'];
 
 interface NavbarProps {
   route: Route;
@@ -27,20 +26,16 @@ export default function Navbar({ route }: NavbarProps) {
   }, [route]);
 
   const handleNavClick = (item: (typeof NAV_ITEMS)[number]) => {
-    if (item.id === 'blog') {
-      navigate({ name: 'blog' });
+    if (route.name !== 'home') {
+      navigate({ name: 'home' });
+      setTimeout(() => navigateToSection(item.id), 100);
     } else {
-      if (route.name !== 'home') {
-        navigate({ name: 'home' });
-        setTimeout(() => navigateToSection(item.id), 100);
-      } else {
-        navigateToSection(item.id);
-      }
+      navigateToSection(item.id);
     }
   };
 
   const isActive = (id: string) => {
-    if (id === 'blog') return route.name === 'blog' || route.name === 'post';
+    if (id === 'blog' && route.name === 'post') return true;
     return route.name === 'home' && activeSection === id;
   };
 

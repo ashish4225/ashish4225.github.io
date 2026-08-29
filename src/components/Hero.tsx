@@ -1,6 +1,5 @@
-import { ArrowRight, Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import { profile } from '@/data';
-import { navigateToSection, navigate } from '@/router';
 
 export default function Hero() {
   return (
@@ -31,26 +30,7 @@ export default function Hero() {
           {profile.intro}
         </p>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button
-            onClick={() => navigateToSection('projects')}
-            className="glass-strong hover-lift rounded-full px-7 py-3 flex items-center gap-2 font-semibold text-ink-900 group"
-          >
-            View Projects
-            <ArrowRight
-              size={18}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </button>
-          <button
-            onClick={() => navigateToSection('contact')}
-            className="glass hover-lift rounded-full px-7 py-3 flex items-center gap-2 font-semibold text-ink-700"
-          >
-            Get in Touch
-            <ArrowRight size={18} />
-          </button>
-        </div>
+
 
         {/* Social */}
         <div className="flex items-center justify-center gap-4 mt-10">

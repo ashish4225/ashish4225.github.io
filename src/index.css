@@ -225,6 +225,117 @@ body {
   color: var(--text-primary);
 }
 
+.prose-custom em {
+  font-style: italic;
+}
+
+.prose-custom a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.prose-custom a:hover {
+  color: #1d4ed8;
+}
+
+.prose-custom pre {
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.prose-custom pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  color: var(--text-primary);
+}
+
+.prose-custom ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-custom blockquote {
+  border-left: 4px solid rgba(0, 0, 0, 0.15);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.prose-custom blockquote p {
+  color: var(--text-muted);
+}
+
+.prose-custom hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.prose-custom h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.prose-custom h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+/* Blog images */
+.prose-custom figure.blog-image {
+  margin: 1.5rem 0;
+}
+
+.prose-custom figure.blog-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.prose-custom figure.blog-image figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.prose-custom .inline-blog-image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 0.5rem 0;
+}
+
+/* KaTeX math blocks */
+.prose-custom .katex-display-rendered {
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose-custom .katex-inline-rendered {
+  display: inline;
+}
+
 /* Selection */
 ::selection {
   background: rgba(0, 0, 0, 0.12);

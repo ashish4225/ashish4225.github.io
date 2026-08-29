@@ -22,9 +22,9 @@ export const profile = {
 };
 
 export const aboutBio = [
-  "I'm an engineering student at VJTI Mumbai with a deep passion for robotics, embedded systems, and product design. I love owning the complete lifecycle of a hardware project — from the first sketch in CAD to a working, manufacturable device in my hands.",
+  "I'm an engineer and I love robotics, embedded systems, and product design. I love owning the complete lifecycle of a hardware project — from the first sketch in CAD to a working, manufacturable device in my hands.",
   'My work spans mechanical design and rapid prototyping, custom PCB layout in KiCad, and bare-metal firmware in C/C++ on platforms like the STM32 and ESP32. I thrive at the boundary where mechanical, electrical, and software decisions all have to come together.',
-  'Beyond building, I enjoy teaching. As Mechanical Head at the Society of Robotics and Automation, VJTI, I run workshops on embedded systems, computer vision, and robotics — helping others take their first steps into the same world that excited me.',
+  'Beyond building, I enjoy teaching. As Mechanical Head at the Society of Robotics and Automation, VJTI, I run workshops helping others take their first steps into the same world that excited me.',
 ];
 
 export const skillGroups: SkillGroup[] = [
