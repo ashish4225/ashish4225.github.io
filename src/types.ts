@@ -13,7 +13,7 @@ export interface Project {
   featured?: boolean;
 }
 
-export type ProjectCategory = 'Embedded' | 'Robotics' | 'Product Design';
+export type ProjectCategory = 'Embedded' | 'Robotics' | 'Product Design' | 'Software';
 
 export interface ExperienceItem {
   id: string;

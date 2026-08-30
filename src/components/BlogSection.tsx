@@ -23,7 +23,7 @@ export default function BlogSection() {
         )}
 
         {posts.length > 0 && (
-          <div className="grid sm:grid-cols-2 gap-6 stagger">
+          <div className="flex flex-col gap-6 stagger">
             {posts.map((post) => (
               <BlogCard key={post.id} post={post} />
             ))}
@@ -46,10 +46,10 @@ function BlogCard({ post }: { post: BlogPost }) {
   return (
     <button
       onClick={() => navigate({ name: 'post', slug: post.slug })}
-      className="glass hover-lift rounded-3xl overflow-hidden text-left group flex flex-col"
+      className="glass hover-lift rounded-3xl overflow-hidden text-left group flex flex-col md:flex-row w-full items-stretch"
     >
       {post.cover_image && (
-        <div className="img-zoom aspect-[16/9] w-full">
+        <div className="img-zoom flex aspect-[16/9] md:aspect-auto md:w-1/3 lg:w-[360px] shrink-0">
           <img
             src={post.cover_image}
             alt={post.title}
@@ -57,29 +57,29 @@ function BlogCard({ post }: { post: BlogPost }) {
           />
         </div>
       )}
-      <div className="p-6 flex flex-col flex-1">
-        <div className="flex items-center gap-3 text-xs text-ink-400 mb-3">
+      <div className="p-6 md:p-8 flex flex-col flex-1 justify-center">
+        <div className="flex items-center gap-3 text-sm text-ink-400 mb-3">
           <span>{date}</span>
         </div>
-        <h3 className="text-lg font-bold text-ink-900 mb-2 leading-tight group-hover:text-ink-700 transition-colors">
+        <h3 className="text-xl md:text-2xl font-bold text-ink-900 mb-3 leading-tight group-hover:text-ink-700 transition-colors">
           {post.title}
         </h3>
-        <p className="text-sm text-ink-500 leading-relaxed line-clamp-3 mb-4">
+        <p className="text-base text-ink-500 leading-relaxed line-clamp-3 mb-6">
           {post.summary}
         </p>
-        <div className="flex flex-wrap gap-1.5 mt-auto items-center justify-between">
-          <div className="flex flex-wrap gap-1.5">
-            {post.tags.slice(0, 3).map((t) => (
+        <div className="flex flex-wrap gap-2 mt-auto items-center justify-between">
+          <div className="flex flex-wrap gap-2">
+            {post.tags.map((t) => (
               <span
                 key={t}
-                className="glass-pill px-2.5 py-0.5 rounded-full text-xs font-medium text-ink-600"
+                className="glass-pill px-3 py-1 rounded-full text-xs font-medium text-ink-600"
               >
                 {t}
               </span>
             ))}
           </div>
           <span className="text-sm font-semibold text-ink-700 flex items-center gap-1 group-hover:gap-2 transition-all">
-            Read <ArrowRight size={14} />
+            Read <ArrowRight size={16} />
           </span>
         </div>
       </div>

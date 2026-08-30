@@ -148,6 +148,26 @@ export const competitions: CompetitionItem[] = [
 
 export const projects: Project[] = [
   {
+    id: 'proj-6',
+    title: '3D Printing Slicer',
+    category: 'Software',
+    date: 'Aug 2026',
+    description:
+      'A custom C++ 3D printing slicer built from scratch to parse OBJ files and generate G-code.',
+    longDescription:
+      'Developed a lightweight 3D printing slicer from scratch in C++. Initially prototyped in Python, the logic was fully ported to C++ for performance. It involves parsing 3D OBJ models, separating them into layers, finding horizontal plane intersections to form contours, generating perimeters/infill, and finally translating these paths into G-code for the 3D printer. Designed to handle various slicing parameters via command-line interface.',
+    image: '/assets/blog/slicer-3d-printing/coverimage.png',
+    technologies: ['C++', 'Makefile', '3D Geometry', 'Algorithms'],
+    highlights: [
+      'Built a complete 3D model slicer in C++ from scratch',
+      'Parses OBJ files, slices into layers, and generates contours/infill',
+      'Translates paths into functional G-code for 3D printers',
+      'Command-line interface with customizable slicing parameters',
+    ],
+    github: 'https://github.com/ashish4225/slicer4225',
+    featured: true,
+  },
+  {
     id: 'proj-1',
     title: 'Bluetooth MIDI Piano',
     category: 'Product Design',
@@ -186,6 +206,24 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: 'proj-5',
+    title: 'Autonomous Maze-Solving Bot',
+    category: 'Robotics',
+    date: 'Oct 2025',
+    description:
+      'An autonomous robot navigating colorblind paths, object detection zones, and complex junctions with sensor fusion.',
+    longDescription:
+      'Built for the SAC – SRA Maze Solving Competition at VJTI, this autonomous robot navigated a multi-challenge maze with colorblind paths, object detection zones, and complex junctions. Fused IR, color, and proximity sensors to handle diverse obstacles, and tuned bot kinematics and control logic for reliable traversal across all maze segments.',
+    image: '/assets/projects/SAC.jpg',
+    technologies: ['ESP32', 'Embedded C/C++', 'Sensor Fusion'],
+    highlights: [
+      'Multi-challenge autonomous maze navigation',
+      'IR, color, and proximity sensor fusion',
+      'Algorithmic path-planning and real-time decisions',
+      'Tuned bot kinematics and control logic',
+    ],
+  },
+  {
     id: 'proj-3',
     title: 'Smart Vaccine Carrier Lid',
     category: 'Product Design',
@@ -204,24 +242,6 @@ export const projects: Project[] = [
     ],
     featured: true,
   },
-  {
-    id: 'proj-5',
-    title: 'Autonomous Maze-Solving Bot',
-    category: 'Robotics',
-    date: 'Oct 2025',
-    description:
-      'An autonomous robot navigating colorblind paths, object detection zones, and complex junctions with sensor fusion.',
-    longDescription:
-      'Built for the SAC – SRA Maze Solving Competition at VJTI, this autonomous robot navigated a multi-challenge maze with colorblind paths, object detection zones, and complex junctions. Fused IR, color, and proximity sensors to handle diverse obstacles, and tuned bot kinematics and control logic for reliable traversal across all maze segments.',
-    image: '/assets/projects/SAC.jpg',
-    technologies: ['ESP32', 'Embedded C/C++', 'Sensor Fusion'],
-    highlights: [
-      'Multi-challenge autonomous maze navigation',
-      'IR, color, and proximity sensor fusion',
-      'Algorithmic path-planning and real-time decisions',
-      'Tuned bot kinematics and control logic',
-    ],
-  },
 ];
 
 export const projectCategories: ('All' | Project['category'])[] = [
@@ -229,6 +249,7 @@ export const projectCategories: ('All' | Project['category'])[] = [
   'Embedded',
   'Robotics',
   'Product Design',
+  'Software',
 ];
 
 export const backgroundImages = [

@@ -40,19 +40,8 @@ Finally, those paths have to be translated into movements and extrusion commands
 
 I ended up separating the problem into roughly these parts:
 
-```text
-OBJ parser
-    ↓
-Geometry utilities
-    ↓
-Layer generation
-    ↓
-Contour reconstruction
-    ↓
-Infill generation
-    ↓
-G-code writer
-```
+
+![Problem sequence](/assets/blog/slicer-3d-printing/Firstflowchart.png)
 
 This separation turned out to be useful because the geometry doesn't really care that the final result is going to be G-code.
 
@@ -749,4 +738,6 @@ It's taking geometry and gradually reducing it into something much more concrete
 
 **a sequence of movements that a machine can execute.**
 
+---
 
+The full source code is available on GitHub: [github.com/ashish4225/slicer4225](https://github.com/ashish4225/slicer4225)

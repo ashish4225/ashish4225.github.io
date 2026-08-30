@@ -172,7 +172,7 @@ function ProjectModal({
 
           {/* Highlights */}
           <h4 className="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">
-            Engineering Details
+            Highlights
           </h4>
           <ul className="space-y-2 mb-6">
             {project.highlights.map((h, i) => (
@@ -188,7 +188,7 @@ function ProjectModal({
 
           {/* Tech */}
           <h4 className="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-3">
-            Technologies
+            Tech Used
           </h4>
           <div className="flex flex-wrap gap-2 mb-6">
             {project.technologies.map((t) => (
