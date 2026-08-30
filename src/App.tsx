@@ -22,7 +22,7 @@ function App() {
           <Hero />
           <About />
           <Projects />
-          <Experience />
+          {/* <Experience /> */}
           <BlogSection />
           <Footer />
         </main>

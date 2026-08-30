@@ -9,7 +9,7 @@ import type {
 export const profile = {
   name: 'Ashish Nerlekar',
   firstName: 'Ashish',
-  tagline: 'Robotics • Embedded Systems • Product Engineering',
+  tagline: '',
   intro:
     'I build robots, embedded systems, and physical products at the intersection of mechanical engineering, electronics, and software.',
   email: 'ashish422005@gmail.com',
@@ -18,7 +18,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/ashish-nerlekar-906911317',
   twitter: '',
   resume: '/assets/resume.pdf',
-  headshot: '/assets/projects/Headshot.jpg',
+  headshot: '/assets/projects/Headshot.png',
 };
 
 export const aboutBio = [
@@ -84,10 +84,10 @@ export const education: EducationItem[] = [
 export const experience: ExperienceItem[] = [
   {
     id: 'exp-1',
-    role: 'Product Design Intern',
+    role: 'Product Development Engineer',
     company: 'superr.ai',
     startDate: 'Sept 2025',
-    endDate: 'Present',
+    endDate: 'July 2026',
     description:
       'Owning the complete system design of a Bluetooth-enabled MIDI piano — from 3D CAD and mechanical design to custom PCB and firmware.',
     bullets: [
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     id: 'proj-1',
     title: 'Bluetooth MIDI Piano',
     category: 'Product Design',
-    date: 'Sept 2025 – Present',
+    date: 'Sept 2025 – July 2026',
     description:
       'An end-to-end Bluetooth-enabled MIDI piano — from 3D CAD and mechanical design to custom PCB and nRF5340 firmware.',
     longDescription:
@@ -213,12 +213,12 @@ export const projects: Project[] = [
     description:
       'An autonomous robot navigating colorblind paths, object detection zones, and complex junctions with sensor fusion.',
     longDescription:
-      'Built for the SAC – SRA Maze Solving Competition at VJTI, this autonomous robot navigated a multi-challenge maze with colorblind paths, object detection zones, and complex junctions. Fused IR, color, and proximity sensors to handle diverse obstacles, and tuned bot kinematics and control logic for reliable traversal across all maze segments.',
+      'Built for the SAC – SRA Maze Solving Competition at VJTI, this autonomous robot navigated a multi-challenge maze with colorblind paths, object detection zones, and complex junctions. Fused IR and color sensors to handle obstacles, and tuned bot kinematics and control logic for reliable traversal across all maze segments.',
     image: '/assets/projects/SAC.jpg',
     technologies: ['ESP32', 'Embedded C/C++', 'Sensor Fusion'],
     highlights: [
       'Multi-challenge autonomous maze navigation',
-      'IR, color, and proximity sensor fusion',
+      'IR and color sensor fusion',
       'Algorithmic path-planning and real-time decisions',
       'Tuned bot kinematics and control logic',
     ],
@@ -238,8 +238,7 @@ export const projects: Project[] = [
       'Peltier-based active cooling with closed-loop PWM',
       'GPS tracking for ASHA worker location monitoring',
       'Vaccine count sensor with live temperature display',
-      'Custom PCB and 3D-printed lid prototypes',
-    ],
+      'Custom PCB and 3D-printed lid prototypes',],
     featured: true,
   },
 ];

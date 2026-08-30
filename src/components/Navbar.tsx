@@ -7,11 +7,10 @@ const NAV_ITEMS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'experience', label: 'Experience' },
   { id: 'blog', label: 'Blog' },
 ];
 
-const SECTION_IDS = ['home', 'about', 'projects', 'experience', 'blog'];
+const SECTION_IDS = ['home', 'about', 'projects', 'blog'];
 
 interface NavbarProps {
   route: Route;

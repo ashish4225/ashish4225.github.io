@@ -7,7 +7,6 @@ export default function Footer() {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' },
     { id: 'blog', label: 'Blog', isBlog: true },
     { id: 'contact', label: 'Contact' },
   ];
@@ -68,14 +67,6 @@ export default function Footer() {
                 aria-label="Email"
               >
                 <Mail size={16} />
-              </a>
-              <a
-                href={profile.resume}
-                download
-                className="glass-pill p-2.5 rounded-full hover:bg-white/50 transition-all hover:scale-110"
-                aria-label="Download Resume"
-              >
-                <Download size={16} />
               </a>
             </div>
           </div>
