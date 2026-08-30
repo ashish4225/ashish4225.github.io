@@ -29,11 +29,14 @@ export default function Footer() {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() =>
-                    item.isBlog
-                      ? navigate({ name: 'blog' })
-                      : navigateToSection(item.id)
-                  }
+                  onClick={() => {
+                    if (window.location.hash.startsWith('#/blog/')) {
+                      navigate({ name: 'home' });
+                      setTimeout(() => navigateToSection(item.id), 100);
+                    } else {
+                      navigateToSection(item.id);
+                    }
+                  }}
                   className="text-sm text-ink-500 hover:text-ink-900 transition-colors"
                 >
                   {item.label}

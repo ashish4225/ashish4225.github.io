@@ -12,7 +12,10 @@ export default function BlogPostPage({ slug }: { slug: string }) {
       <div className="page-fade min-h-screen px-6 pt-28 pb-20">
         <div className="max-w-3xl mx-auto">
           <button
-            onClick={() => navigate({ name: 'blog' })}
+            onClick={() => {
+              navigate({ name: 'home' });
+              setTimeout(() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' }), 100);
+            }}
             className="glass-pill rounded-full px-4 py-2 flex items-center gap-2 text-sm font-medium text-ink-700 hover:bg-white/50 transition-colors mb-8"
           >
             <ArrowLeft size={16} /> Back to Blog
@@ -38,7 +41,10 @@ export default function BlogPostPage({ slug }: { slug: string }) {
     <div className="page-fade min-h-screen px-6 pt-28 pb-20">
       <div className="max-w-3xl mx-auto">
         <button
-          onClick={() => navigate({ name: 'blog' })}
+          onClick={() => {
+            navigate({ name: 'home' });
+            setTimeout(() => document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' }), 100);
+          }}
           className="glass-pill rounded-full px-4 py-2 flex items-center gap-2 text-sm font-medium text-ink-700 hover:bg-white/50 transition-colors mb-8"
         >
           <ArrowLeft size={16} /> Back to Blog
