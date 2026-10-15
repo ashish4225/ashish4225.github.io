@@ -6,9 +6,8 @@ export default function Footer() {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'projects', label: 'Projects and Experience' },
     { id: 'blog', label: 'Blog', isBlog: true },
-    { id: 'contact', label: 'Contact' },
   ];
 
   return (

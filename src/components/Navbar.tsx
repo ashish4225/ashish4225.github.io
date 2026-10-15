@@ -6,7 +6,7 @@ import { navigateToSection, navigate, type Route } from '@/router';
 const NAV_ITEMS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
+  { id: 'projects', label: 'Projects and Experience' },
   { id: 'blog', label: 'Blog' },
 ];
 

@@ -17,22 +17,18 @@ function App() {
       <BackgroundLayer />
       <Navbar route={route} />
 
-      {route.name === 'home' && (
+      {route.name === 'post' ? (
+        <main className="page-fade">
+          <BlogPostPage slug={route.slug} />
+          <Footer />
+        </main>
+      ) : (
         <main className="page-fade">
           <Hero />
           <About />
           <Projects />
-          {/* <Experience /> */}
+          <Experience />
           <BlogSection />
-          <Footer />
-        </main>
-      )}
-
-
-
-      {route.name === 'post' && (
-        <main className="page-fade">
-          <BlogPostPage slug={route.slug} />
           <Footer />
         </main>
       )}

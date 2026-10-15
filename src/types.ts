@@ -2,6 +2,7 @@ export interface Project {
   id: string;
   title: string;
   category: ProjectCategory;
+  company?: string;
   date: string;
   description: string;
   longDescription: string;

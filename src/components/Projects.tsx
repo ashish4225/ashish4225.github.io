@@ -21,7 +21,7 @@ export default function Projects() {
           Work
         </p>
         <h2 className="text-3xl md:text-5xl font-bold text-ink-900 mb-10 tracking-tight">
-          Projects
+          Projects and Experience
         </h2>
 
         {/* Filters */}
@@ -86,6 +86,21 @@ function ProjectCard({
 
       {/* Body */}
       <div className="p-5 flex flex-col flex-1">
+        {(project.company || project.date === 'Ongoing') && (
+          <div className="flex flex-wrap items-center gap-1.5 mb-2">
+            {project.company && (
+              <span className="text-[11px] font-bold uppercase tracking-wider text-ink-500 bg-white/70 px-2 py-0.5 rounded-md border border-black/[0.05]">
+                {project.company}
+              </span>
+            )}
+            {project.date === 'Ongoing' && (
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Ongoing
+              </span>
+            )}
+          </div>
+        )}
         <div className="flex items-start justify-between gap-2 mb-2">
           <h3 className="text-lg font-bold text-ink-900 leading-tight">
             {project.title}
@@ -159,9 +174,22 @@ function ProjectModal({
 
         {/* Content */}
         <div className="p-6 md:p-8">
-          <span className="text-xs font-semibold uppercase tracking-wider text-ink-400">
-            {project.category} • {project.date}
-          </span>
+          <div className="flex flex-wrap items-center gap-2 mb-2">
+            {project.company && (
+              <span className="text-xs font-bold uppercase tracking-wider text-ink-700 bg-black/[0.05] px-2.5 py-0.5 rounded-md">
+                {project.company}
+              </span>
+            )}
+            {project.date === 'Ongoing' && (
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Ongoing
+              </span>
+            )}
+            <span className="text-xs font-semibold uppercase tracking-wider text-ink-400">
+              {project.category} {project.date !== 'Ongoing' && `• ${project.date}`}
+            </span>
+          </div>
           <h3 className="text-2xl md:text-3xl font-bold text-ink-900 mt-2 mb-4">
             {project.title}
           </h3>

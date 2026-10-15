@@ -25,10 +25,10 @@ export default function About() {
               ))}
             </div>
 
-            {/* Skills */}
+            {/* My Stack */}
             <div className="md:col-span-2 md:border-l md:border-white/30 md:pl-8">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-ink-500 mb-4">
-                Skills
+                My Stack
               </h3>
               <div className="space-y-4">
                 {skillGroups.map((group) => (

@@ -13,7 +13,11 @@ function getRouteFromHash(): Route {
     const slug = hash.slice('blog/'.length);
     return { name: 'post', slug };
   }
-  if (hash === 'blog') return { name: 'blog' };
+  if (hash === 'blog') {
+    setTimeout(() => {
+      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  }
   return { name: 'home' };
 }
 
@@ -21,7 +25,10 @@ export function navigate(route: Route) {
   if (route.name === 'home') {
     window.location.hash = '';
   } else if (route.name === 'blog') {
-    window.location.hash = '#/blog';
+    window.location.hash = '';
+    setTimeout(() => {
+      document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
   } else if (route.name === 'post') {
     window.location.hash = `#/blog/${route.slug}`;
   }
@@ -44,7 +51,10 @@ export function useRouter() {
     const stored = sessionStorage.getItem(CONTEXT_KEY);
     if (stored) {
       try {
-        return JSON.parse(stored) as Route;
+        const parsed = JSON.parse(stored);
+        if (parsed.name === 'post' && parsed.slug) {
+          return { name: 'post', slug: parsed.slug };
+        }
       } catch {
         // fall through
       }
